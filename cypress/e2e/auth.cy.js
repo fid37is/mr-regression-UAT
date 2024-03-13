@@ -100,7 +100,7 @@ describe('Verify and Validate users are authenticated to access the MR Web app',
         'auto-emailaideyu@yopmail.com')
       cy.get('form').find('[name="password"]').type(
         '1234Papa!')
-      cy.contains('Login').click()
+      cy.contains('Login').click().wait(2000)
       cy.contains('Settings').click()
       cy.contains('Password').click()
       cy.get('[name="oldPassword"]').type('1234Papa!')
